@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+theme {
+  --font-heading: "Comfortaa", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-body-bold: "Quicksand", sans-serif;
+  --font-heading-bold: "Asul", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Swiper: move pagination slightly down for Services -> What_We_Provide */
+.services-provide-swiper .swiper-pagination {
+  bottom: -6px;
+}
