@@ -8,6 +8,12 @@ import News from "./pages/News";
 import NewsDetail from "./pages/NewsDetail";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
+import AdminLogin from "./pages/admin/Login";
+import Dashboard from "./pages/admin/Dashboard";
+import CreatePost from "./pages/admin/CreatePost";
+import EditPost from "./pages/admin/EditPost";
+import ProtectedRoute from "./pages/admin/ProtectedRoute";
+import { AuthProvider } from "./context/AuthContext";
 
 
 
@@ -33,6 +39,32 @@ const AnimatedRoutes = () => {
         <Route path="/news/:slug" element={<NewsDetail />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
+        {/* Admin Routes */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/posts/create"
+          element={
+            <ProtectedRoute>
+              <CreatePost />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/posts/edit/:id"
+          element={
+            <ProtectedRoute>
+              <EditPost />
+            </ProtectedRoute>
+          }
+        />
         
       </Routes>
     </AnimatePresence>
@@ -42,13 +74,13 @@ const AnimatedRoutes = () => {
 function App() {
 
   return (
-   
+    <AuthProvider>
       <Router>
         <ScrollToTop />
         <AnimatedRoutes />
       </Router>
-  
-  )
+    </AuthProvider>
+  );
 }
 
 export default App

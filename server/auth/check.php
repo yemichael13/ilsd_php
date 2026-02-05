@@ -1,17 +1,19 @@
 <?php
 session_start();
-session_destroy();
+require __DIR__ . "/../config/db.php";
 
 // CORS: reflect origin to support requests with credentials
 $origin = $_SERVER['HTTP_ORIGIN'] ?? 'http://localhost:5173';
 header("Access-Control-Allow-Origin: $origin");
 header('Access-Control-Allow-Credentials: true');
-header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Methods: GET, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
-header("Content-Type: application/json");
+header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-	exit;
+    exit;
 }
 
-echo json_encode(["success" => true]);
+$ok = isset($_SESSION['admin']);
+
+echo json_encode(["authenticated" => $ok]);
