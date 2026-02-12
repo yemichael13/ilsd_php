@@ -11,54 +11,22 @@ import Treatment from "../../assets/images/treatment.jpg";
 import Digital from "../../assets/images/digital-record.webp";
 import Disease from "../../assets/images/disease-preventionf.png";
 import Vaccination from "../../assets/images/vaccination.jpg";
+import { useTranslation } from 'react-i18next';
 
-const services = [
-  {
-    title: "Artificial Insemination & Reproductive Health",
-    image: Artificial,
-    description:
-      "Enhancing livestock genetics and fertility through expert AI procedures and reproductive monitoring.",
-  },
-  {
-    title: "Veterinary Diagnosis, Treatment & Vaccination",
-    image: Treatment,
-    description:
-      "Providing accurate diagnosis, effective treatment, and preventive vaccinations for healthier herds.",
-  },
-  {
-    title: "Nutrition & Breeding Advisory",
-    image: Advice,
-    description:
-      "Guiding farmers on optimal feeding and breeding strategies to boost livestock productivity.",
-  },
-  {
-    title: "Disease Prevention & Herd Health Planning",
-    image: Disease,
-    description:
-      "Implementing proactive health plans to reduce disease outbreaks and improve herd resilience.",
-  },
-  {
-    title: "Pregnancy Diagnosis & Monitoring",
-    image: Vaccination,
-    description:
-      "Using reliable techniques to detect pregnancy early and monitor reproductive progress.",
-  },
-  {
-    title: "Digital Record Keeping & Traceability",
-    image: Digital,
-    description:
-      "Empowering farmers with digital tools to track livestock history, health, and movement.",
-  },
-];
+// Images aligned with translation index order
+const images = [Artificial, Treatment, Advice, Disease, Vaccination, Digital];
 
 const What_We_Provide = () => {
+  const { t } = useTranslation();
+  const services = t('services.list', { returnObjects: true }) || [];
+
   return (
     <div className="px-6 py-10 mt-16">
       <h1 className="md:text-6xl text-4xl font-black text-center mb-6">
-        What We Provide
+        {t('services.title')}
       </h1>
       <p className="text-center text-gray-700 max-w-3xl mx-auto mb-10">
-        Our platform delivers essential livestock services tailored for Ethiopian farmers — combining expert care, modern tools, and practical solutions to improve productivity and animal well-being.
+        {t('services.description')}
       </p>
 
       <Swiper
@@ -77,7 +45,7 @@ const What_We_Provide = () => {
           <SwiperSlide key={index}>
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <img
-                src={service.image}
+                src={images[index]}
                 alt={service.title}
                 className="w-full h-56 object-cover"
               />

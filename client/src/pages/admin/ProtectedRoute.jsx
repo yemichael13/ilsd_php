@@ -1,28 +1,13 @@
-import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import { API } from "../../api.js";
+import { useAuth } from "../../context/AuthContext";
 
 export default function ProtectedRoute({ children }) {
-  const [status, setStatus] = useState({ loading: true, ok: false });
+  const { authed, loading } = useAuth();
 
-  useEffect(() => {
-    let mounted = true;
+  // while auth status is being determined, don't render protected UI
+  if (loading) return null;
 
-    (async () => {
-      try {
-        const res = await fetch(API.checkAuth, { credentials: "include" });
-        const data = await res.json();
-        if (mounted) setStatus({ loading: false, ok: !!data.authenticated });
-      } catch (e) {
-        if (mounted) setStatus({ loading: false, ok: false });
-      }
-    })();
-
-    return () => (mounted = false);
-  }, []);
-
-  if (status.loading) return null;
-  if (!status.ok) return <Navigate to="/admin/login" replace />;
+  if (!authed) return <Navigate to="/admin/login" replace />;
 
   return children;
 }

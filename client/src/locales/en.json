@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "news": "News & Updates",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "menu": {"menu": "Menu"},
+  "common": {
+    "learnMore": "Learn More",
+    "viewServices": "View Services",
+    "loading": "Loading...",
+    "readMore": "Read More →",
+    "noData": "No content available at the moment."
+  },
+  "home": {
+    "hero": {
+      "title": "Integrated Livestock Service Delivery",
+      "subtitle": "Connecting Farmers to Quality Livestock Services - Anytime, Anywhere!",
+      "paragraph": "ILSD is a digital livestock service delivery platform connecting farmers with certified AI technicians, veterinarians, and livestock experts across North Shewa.",
+      "buttons": {
+        "learnMore": "Learn More",
+        "viewServices": "View Services"
+      }
+    }
+  },
+  "services": {
+    "title": "What We Provide",
+    "description": "Our platform delivers essential livestock services tailored for Ethiopian farmers — combining expert care, modern tools, and practical solutions to improve productivity and animal well-being.",
+    "list": [
+      {
+        "title": "Artificial Insemination & Reproductive Health",
+        "description": "Enhancing livestock genetics and fertility through expert AI procedures and reproductive monitoring."
+      },
+      {
+        "title": "Veterinary Diagnosis, Treatment & Vaccination",
+        "description": "Providing accurate diagnosis, effective treatment, and preventive vaccinations for healthier herds."
+      },
+      {
+        "title": "Nutrition & Breeding Advisory",
+        "description": "Guiding farmers on optimal feeding and breeding strategies to boost livestock productivity."
+      },
+      {
+        "title": "Disease Prevention & Herd Health Planning",
+        "description": "Implementing proactive health plans to reduce disease outbreaks and improve herd resilience."
+      },
+      {
+        "title": "Pregnancy Diagnosis & Monitoring",
+        "description": "Using reliable techniques to detect pregnancy early and monitor reproductive progress."
+      },
+      {
+        "title": "Digital Record Keeping & Traceability",
+        "description": "Empowering farmers with digital tools to track livestock history, health, and movement."
+      }
+    ]
+  },
+  "services_how": {
+    "title": "How It Works",
+    "steps": [
+      {"title": "Farmer Requests Help", "description": "The farmer contacts our platform via mobile, web, or call center to request livestock assistance."},
+      {"title": "Operator Identifies Nearby Professional", "description": "Our system locates the closest certified provider based on location and availability."},
+      {"title": "Professional Accepts & Arrives", "description": "The selected professional confirms the request and travels to the farmer’s location to provide service."},
+      {"title": "Service Completed & Payment Processed", "description": "After the service is delivered, payment is processed digitally or in person, and records are updated."}
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What is Integrated Livestock Service Delivery (ILSD)?",
+        "answer": "ILSD is a digital livestock service delivery platform that connects livestock farmers with certified artificial insemination (AI) technicians, veterinarians, and livestock specialists to improve access to timely, quality, and reliable livestock services across North Shewa, Ethiopia."
+      },
+      {
+        "question": "Who can use ILSD services?",
+        "answer": "ILSD services are available to smallholder farmers, livestock cooperatives, youth and women livestock producers, and small to medium livestock enterprises such as dairy farms and fattening units."
+      },
+      {
+        "question": "What types of services does ILSD provide?",
+        "answer": "ILSD provides artificial insemination and reproductive health services, veterinary diagnosis and treatment, vaccination and disease prevention, pregnancy diagnosis, livestock nutrition and breeding advisory services, and digital livestock record keeping."
+      },
+      {
+        "question": "How do farmers request a service?",
+        "answer": "Farmers can request services through simple digital channels. Initially, ILSD supports basic phone and SMS-based access, with plans to expand to mobile and web-based service requests as the platform grows."
+      },
+      {
+        "question": "How are service providers selected?",
+        "answer": "All service providers working with ILSD are verified and certified professionals, including AI technicians, veterinarians, and livestock specialists. ILSD follows standardized service protocols and regularly monitors service quality."
+      },
+      {
+        "question": "How do payments work?",
+        "answer": "During the initial phase, farmers pay service providers directly in cash. As the platform develops, ILSD will gradually introduce digital and mobile payment options to improve convenience and transparency."
+      },
+      {
+        "question": "Where does ILSD operate?",
+        "answer": "ILSD currently operates in North Shewa Zone, Amhara Region, starting from Debre Birhan and expanding to surrounding woredas and kebeles, including rural, peri-urban, and urban areas."
+      },
+      {
+        "question": "Is ILSD a government service?",
+        "answer": "No. ILSD is a private digital service platform that works in collaboration with government livestock offices, cooperatives, and other stakeholders to complement and strengthen existing livestock service delivery systems."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Become a partner or want any information?",
+    "title": "Get In Touch",
+    "phone": "+251-XXX-XXX-XXX",
+    "email": "info@livestock.org",
+    "address": "123 Street, Addis Ababa"
+  },
+  "news": {
+    "title": "News & Updates",
+    "description": "Stay informed with the latest news, updates, and insights from Integrated Livestock Service Delivery.",
+    "loading": "Loading news...",
+    "failed": "Failed to load news",
+    "noNews": "No news available at the moment.",
+    "readMore": "Read More →"
+  },
+  "about": {
+    "who": {
+      "title": "Who We Are",
+      "paragraphShort": "ILSD is a digital livestock service delivery platform connecting farmers with certified AI technicians, veterinarians, and livestock experts across North Shewa.",
+      "readMore": "Read more",
+      "showLess": "Show less",
+      "moreParagraph": "We are a digital AgTech startup dedicated to transforming livestock management through technology. Our platform connects farmers with certified animal health and breeding professionals, providing fast, reliable, and affordable services.",
+      "overlayText": "We focus on bridging the gap between rural communities and experienced veterinarians using mobile, web, and call-center-based solutions. Starting in the Addis Ababa–Debrebirhan corridor, our goal is to make essential livestock services easily accessible to every farmer, anytime they need it."
+    },
+    "mission": {
+      "title": "Mission & Vision",
+      "missionTitle": "Our Mission",
+      "missionText": "Our Mission is to empower farmers with quick and dependable access to animal health and breeding services by leveraging digital tools, skilled professionals, and smart agricultural systems.",
+      "visionTitle": "Our Vision",
+      "visionText": "Our Vision is to build Ethiopia’s leading digital livestock service ecosystem—one that increases productivity, supports sustainable farming, and improves the livelihoods of millions of farmers across the country."
+    },
+    "values": {
+      "title": "Our Values",
+      "list": [
+        {"title": "Accessibility", "text": "We believe every farmer deserves access to quality services."},
+        {"title": "Professionalism", "text": "All service providers on our platform are trained and certified."},
+        {"title": "Innovation", "text": "We use modern technology to solve real agricultural challenges."},
+        {"title": "Impact", "text": "Our work aims to strengthen communities and improve the livestock sector."},
+        {"title": "Quality", "text": "We prioritize excellence in every service delivered to farmers."},
+        {"title": "Sustainability", "text": "We promote practices that protect the environment and ensure long-term growth."},
+        {"title": "Farm-Centered", "text": "Our solutions are designed with farmers’ needs at the core."},
+        {"title": "Digital Inclusion", "text": "We ensure even farmers with basic phones can access our services."},
+        {"title": "Accountability", "text": "We uphold transparency and responsibility in all our operations."}
+      ]
+    }
+  },
+  "footer": {
+    "brandName": "Integrated Livestock Delivery Service",
+    "subscribeHeading": "Subscribe",
+    "placeholder": "Your email",
+    "subscribeButton": "Subscribe",
+    "quickLinks": "Quick Links",
+    "findUs": "Find Us",
+    "copyright": "Integrated Livestock Delivery Service. All Rights Reserved."
+  }
+  ,
+  "admin": {
+    "login": {
+      "title": "Admin Login",
+      "emailLabel": "Email",
+      "emailPlaceholder": "admin@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "login": "Login",
+      "loggingIn": "Logging in...",
+      "invalid": "Invalid credentials",
+      "failed": "Login failed"
+    }
+  }
+}

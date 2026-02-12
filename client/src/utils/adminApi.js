@@ -16,14 +16,18 @@ export const adminPostsAPI = {
   },
 
   async get(idOrSlug) {
-    const qs = typeof idOrSlug === 'number' ? `?id=${idOrSlug}` : `?slug=${encodeURIComponent(idOrSlug)}`;
+    const str = String(idOrSlug);
+    const isNumeric = /^\d+$/.test(str);
+    const qs = isNumeric ? `?id=${str}` : `?slug=${encodeURIComponent(str)}`;
     let res = await fetch(`${API.getPost}${qs}`, { credentials: 'include' });
     if (res.status === 401 && window.location.hostname === 'localhost') {
       // retry with dev bypass
       res = await fetch(`${API.getPost}${qs}&dev=1`);
     }
     if (!res.ok) throw new Error('Failed to fetch post');
-    return await res.json();
+    const data = await res.json();
+    if (data === null) throw new Error('Post not found');
+    return data;
   },
 
   async getById(id) {

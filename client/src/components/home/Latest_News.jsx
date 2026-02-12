@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Reveal from "../motion/Reveal";
 import { postsAPI, getFileUrl } from "../../utils/api";
+import { useTranslation } from 'react-i18next';
 
 const Latest_News = () => {
+    const { t } = useTranslation();
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -45,13 +47,11 @@ const Latest_News = () => {
     return (
         <div className="py-20 bg-green-800">
             <Reveal>
-                <h1 className="text-center text-white text-4xl md:text-6xl font-bold mb-12">
-                    Latest News & Updates
-                </h1>
+                <h1 className="text-center text-white text-4xl md:text-6xl font-bold mb-12">{t('news.title')}</h1>
             </Reveal>
 
             {loading && (
-                <div className="text-center text-white text-xl">Loading news...</div>
+                <div className="text-center text-white text-xl">{t('news.loading')}</div>
             )}
 
             {error && (
@@ -59,7 +59,7 @@ const Latest_News = () => {
             )}
 
             {!loading && !error && posts.length === 0 && (
-                <div className="text-center text-white text-xl">No news available at the moment.</div>
+                <div className="text-center text-white text-xl">{t('news.noNews')}</div>
             )}
 
             {!loading && !error && posts.length > 0 && (
@@ -89,7 +89,7 @@ const Latest_News = () => {
                                             )}
                                             <div className="flex justify-between items-center text-xs text-gray-500">
                                                 <span>{formatDate(post.created_at)}</span>
-                                                <span className="text-green-700 font-semibold">Read More →</span>
+                                                <span className="text-green-700 font-semibold">{t('news.readMore')}</span>
                                             </div>
                                         </div>
                                     </Link>
@@ -99,7 +99,7 @@ const Latest_News = () => {
                     </div>
                     <Reveal delay={0.3}>
                         <div className="text-center mt-10">
-                            <Link to="/news" className="inline-block bg-white text-green-800 font-semibold px-6 py-3 rounded-lg hover:bg-green-100 transition-colors duration-300">View All News</Link>
+                            <Link to="/news" className="inline-block bg-white text-green-800 font-semibold px-6 py-3 rounded-lg hover:bg-green-100 transition-colors duration-300">{t('news.title')}</Link>
                         </div>
                     </Reveal>
                 </div>

@@ -15,55 +15,24 @@ import Farm_Centered from "../../assets/images/farm-centered.png";
 import Digital_Inclusion from "../../assets/images/digital-inclusion.png";
 import Accountability from "../../assets/images/accontability.png";
 
-const values = [
-  {
-    image: Accessibility,
-    title: "Accessibility",
-    text: "We believe every farmer deserves access to quality services.",
-  },
-  {
-    image: Professionalism,
-    title: "Professionalism",
-    text: "All service providers on our platform are trained and certified.",
-  },
-  {
-    image: Innovation,
-    title: "Innovation",
-    text: "We use modern technology to solve real agricultural challenges.",
-  },
-  {
-    image: Impact,
-    title: "Impact",
-    text: "Our work aims to strengthen communities and improve the livestock sector.",
-  },
-  {
-    image: Quality,
-    title: "Quality",
-    text: "We prioritize excellence in every service delivered to farmers.",
-  },
-  {
-    image: Sustainability,
-    title: "Sustainability",
-    text: "We promote practices that protect the environment and ensure long-term growth.",
-  },
-  {
-    image: Farm_Centered,
-    title: "Farm-Centered",
-    text: "Our solutions are designed with farmers’ needs at the core.",
-  },
-  {
-    image: Digital_Inclusion,
-    title: "Digital Inclusion",
-    text: "We ensure even farmers with basic phones can access our services.",
-  },
-  {
-    image: Accountability,
-    title: "Accountability",
-    text: "We uphold transparency and responsibility in all our operations.",
-  },
+const images = [
+  Accessibility,
+  Professionalism,
+  Innovation,
+  Impact,
+  Quality,
+  Sustainability,
+  Farm_Centered,
+  Digital_Inclusion,
+  Accountability,
 ];
 
+import { useTranslation } from 'react-i18next';
+
 const Mission_Vision_Value = () => {
+  const { t } = useTranslation();
+  const values = t('about.values.list', { returnObjects: true }) || [];
+
   return (
     <div className="relative overflow-hidden">
       {/* Background image */}
@@ -75,24 +44,18 @@ const Mission_Vision_Value = () => {
 
       {/* Mission & Vision */}
       <div className="relative z-10 my-10 md:mx-20 mx-4 flex flex-col gap-4 p-4 md:p-6 rounded-xl ">
-        <h2 className="font-bold text-4xl text-center">Mission & Vision</h2>
+        <h2 className="font-bold text-4xl text-center">{t('about.mission.title')}</h2>
         <p className="text-gray-800 md:text-xl">
-          <span className="font-bold">Our Mission</span> is to empower farmers
-          with quick and dependable access to animal health and breeding
-          services by leveraging digital tools, skilled professionals, and smart
-          agricultural systems.
+          <span className="font-bold">{t('about.mission.missionTitle')}</span> {t('about.mission.missionText')}
         </p>
         <p className="text-gray-800 md:text-xl">
-          <span className="font-bold">Our Vision</span> is to build Ethiopia’s
-          leading digital livestock service ecosystem—one that increases
-          productivity, supports sustainable farming, and improves the
-          livelihoods of millions of farmers across the country.
+          <span className="font-bold">{t('about.mission.visionTitle')}</span> {t('about.mission.visionText')}
         </p>
       </div>
 
       {/* Values Carousel */}
       <div className="relative z-10 my-10 md:mx-20 mx-4">
-        <h2 className="text-4xl font-bold text-center mb-6">Our Values</h2>
+        <h2 className="text-4xl font-bold text-center mb-6">{t('about.values.title')}</h2>
         <Swiper
           modules={[Autoplay]}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
@@ -107,13 +70,11 @@ const Mission_Vision_Value = () => {
             <SwiperSlide key={index}>
               <div className="border border-green-700 rounded-2xl p-6 flex flex-col gap-4 justify-center items-center text-center bg-white/80 shadow-md">
                 <img
-                  src={val.image}
+                  src={images[index]}
                   alt={val.title}
                   className="rounded-full w-24 h-24 object-contain"
                 />
-                <h3 className="font-bold text-2xl text-green-700">
-                  {val.title}
-                </h3>
+                <h3 className="font-bold text-2xl text-green-700">{val.title}</h3>
                 <p className="text-gray-700">{val.text}</p>
               </div>
             </SwiperSlide>

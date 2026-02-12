@@ -6,8 +6,10 @@ import PageMotion from "../components/motion/PageMotion";
 import Reveal from "../components/motion/Reveal";
 import Stagger from "../components/motion/Stagger";
 import { postsAPI, getFileUrl } from "../utils/api";
+import { useTranslation } from 'react-i18next';
 
 const News = () => {
+    const { t } = useTranslation();
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -20,7 +22,7 @@ const News = () => {
                 setPosts(data);
                 setError(null);
             } catch (err) {
-                setError("Failed to load news");
+                setError(t('news.failed'));
                 console.error(err);
             } finally {
                 setLoading(false);
@@ -52,23 +54,20 @@ const News = () => {
             <PageMotion>
                 <div className="min-h-screen bg-gray-50 pt-24 pb-16">
                     <Reveal className="px-6 md:px-20 mb-12">
-                        <h1 className="text-4xl md:text-6xl font-bold text-center text-green-800 mb-4">News & Updates</h1>
-                        <p className="text-center text-gray-600 max-w-2xl mx-auto">
-                            Stay informed with the latest news, updates, and insights from
-                            Integrated Livestock Service Delivery.
-                        </p>
+                        <h1 className="text-4xl md:text-6xl font-bold text-center text-green-800 mb-4">{t('news.title')}</h1>
+                        <p className="text-center text-gray-600 max-w-2xl mx-auto">{t('news.description')}</p>
                     </Reveal>
 
                     {loading && (
-                        <div className="text-center text-gray-600 text-xl py-20">Loading news...</div>
+                        <div className="text-center text-gray-600 text-xl py-20">{t('news.loading')}</div>
                     )}
 
                     {error && (
-                        <div className="text-center text-red-600 text-xl py-20">{error}</div>
+                        <div className="text-center text-red-600 text-xl py-20">{t('news.failed')}</div>
                     )}
 
                     {!loading && !error && posts.length === 0 && (
-                        <div className="text-center text-gray-600 text-xl py-20">No news available at the moment.</div>
+                        <div className="text-center text-gray-600 text-xl py-20">{t('news.noNews')}</div>
                     )}
 
                     {!loading && !error && posts.length > 0 && (
@@ -85,7 +84,7 @@ const News = () => {
                                                     {post.excerpt && <p className="text-gray-600 text-sm mb-4 line-clamp-3">{post.excerpt}</p>}
                                                     <div className="flex justify-between items-center text-xs text-gray-500">
                                                         <span>{formatDate(post.created_at)}</span>
-                                                        <span className="text-green-700 font-semibold">Read More →</span>
+                                                        <span className="text-green-700 font-semibold">{t('news.readMore')}</span>
                                                     </div>
                                                 </div>
                                             </Link>

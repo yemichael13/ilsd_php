@@ -81,7 +81,7 @@ const EditPost = () => {
       if (newFiles.length) {
         await adminPostsAPI.uploadFiles(id, newFiles);
       }
-      navigate("/admin/dashboard");
+      navigate("/admin");
     } catch (err) {
       setError(err.message || "Failed to update post");
       if (err.message.includes("Unauthorized")) {
@@ -110,7 +110,7 @@ const EditPost = () => {
           <Reveal>
             <div className="mb-6">
               <button
-                onClick={() => navigate("/admin/dashboard")}
+                onClick={() => navigate("/admin")}
                 className="flex items-center gap-2 text-gray-600 hover:text-gray-800 mb-4"
               >
                 <FaArrowLeft /> Back to Dashboard
