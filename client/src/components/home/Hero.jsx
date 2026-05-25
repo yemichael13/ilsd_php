@@ -8,6 +8,8 @@ import SplitText from "../animations/SplitText";
 import ShinyText from "../animations/ShinyText";
 import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
+import Reveal from "../../components/motion/Reveal";
+import PageMotion from "../../components/motion/PageMotion";
 
 const images = [Hero_Pic, Livestock, Livestock2, Livestock3, Livestock4];
 
@@ -43,7 +45,8 @@ const Hero = () => {
         {/* Content layer */}
 
         <div className="hero-content relative z-10 flex flex-col w-full md:w-2/3 h-full justify-center items-center md:items-start pt-25 px-4 md:px-10">
-          
+        <PageMotion>
+          <Reveal>  
         <SplitText
             text={t('home.hero.title')}
             className="md:text-7xl text-5xl font-extrabold text-white pb-4"
@@ -85,6 +88,8 @@ const Hero = () => {
             </button>
             </Link>
           </div>
+          </Reveal>
+          </PageMotion>
         </div>
       </section>
     </div>
