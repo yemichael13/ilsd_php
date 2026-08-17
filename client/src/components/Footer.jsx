@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Cow from "../assets/images/cow2.jpg";
-import Logo from "../assets/images/logo_live.png";
+import Logo from "../assets/images/hulegeb_logo_bg.png";
 import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -8,6 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { useTranslation } from 'react-i18next';
+import { FaTelegramPlane } from "react-icons/fa";
 
 
 
@@ -58,7 +59,7 @@ const Footer = () => {
           </div>
                 <div className="w-full md:w-1/2 flex md:gap-20 gap-5 justify-center items-center px-4">
                     <div className=" border-r-2 border-r-white md:px-6 px-3 py-1 md:py-3">
-                        <h3 className="md:text-3xl text-2xl text-white font-bold mb-4">{t('footer.quickLinks')}</h3>
+                        <h3 className="md:text-3xl text-2xl text-green-700 font-bold mb-4">{t('footer.quickLinks')}</h3>
                             <ul className="flex flex-col gap-2 font-semibold text-sm text-white">
                             <li ><Link to="/news" className="cursor-pointer hover:text-green-700 transition-colors duration-300">{t('nav.news')}</Link></li>
                             <li ><Link to="/" className="cursor-pointer hover:text-green-700 transition-colors duration-300">{t('nav.home')}</Link></li>
@@ -69,14 +70,12 @@ const Footer = () => {
                             </ul>
                     </div>
                     <div className="">
-                        <h3 className="text-white font-bold md:text-3xl text-2xl mb-4">{t('footer.findUs')}</h3>
+                        <h3 className="text-green-700 font-bold md:text-3xl text-2xl mb-4">{t('footer.findUs')}</h3>
                         <ul className="flex flex-col text-sm gap-2">
                             
-                            <a href="" target="_blank" rel="noopener noreferrer" className="cursor-pointer items-baseline transition-transform duration-300 hover:-translate-y-2 flex gap-2 text-white font-semibold"><FaFacebook />Facebook</a>
-                            <a href="" target="_blank" rel="noopener noreferrer" className="cursor-pointer items-baseline transition-transform duration-300 hover:-translate-y-2 flex gap-2 text-white font-semibold"><FaInstagram />Instagram</a>
-                            <a href="" target="_blank" rel="noopener noreferrer" className="cursor-pointer items-baseline transition-transform duration-300 hover:-translate-y-2 flex gap-2 text-white font-semibold"><FaLinkedin />LinkedIn</a>
-                            <a href="" target="_blank" rel="noopener noreferrer" className="cursor-pointer items-baseline transition-transform duration-300 hover:-translate-y-2 flex gap-2 text-white font-semibold"><FaXTwitter />X</a>
-                            <a href="" target="_blank" rel="noopener noreferrer" className="cursor-pointer items-baseline transition-transform duration-300 hover:-translate-y-2 flex gap-2 text-white font-semibold"><FaTiktok />Tiktok</a>
+                            <a href="https://web.facebook.com/profile.php?id=61590557491057" target="_blank" rel="noopener noreferrer" className="cursor-pointer items-baseline transition-transform duration-300 hover:-translate-y-2 flex gap-2 text-white font-semibold"><FaFacebook />Facebook</a>
+                            <a href="https://tiktok.com/@hulegebvet" target="_blank" rel="noopener noreferrer" className="cursor-pointer items-baseline transition-transform duration-300 hover:-translate-y-2 flex gap-2 text-white font-semibold"><FaTiktok />Tiktok</a>
+                            <a href="https://t.me/hulegebvet" target="_blank" rel="noopener noreferrer" className="cursor-pointer items-baseline transition-transform duration-300 hover:-translate-y-2 flex gap-2 text-white font-semibold"><FaTelegramPlane />Telegram</a>
                         </ul>
                     </div>
                     

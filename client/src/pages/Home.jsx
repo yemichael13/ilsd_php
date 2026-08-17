@@ -33,11 +33,7 @@ const Home = () => {
                   <Why_ILSD />
                 </Reveal>
             </section>
-            <section id="how_it_works">
-                <Reveal>
-                  <How_It_Works />
-                </Reveal>
-            </section>
+
             <section id="impact">
                 <Reveal>
                   <Impact />

@@ -1,45 +1,32 @@
 import React from "react";
 import Goat from "../../assets/images/goat.jpg";
-import CountUp from "../animations/CountUp";
 import Reveal from "../motion/Reveal";
+import { useTranslation } from "react-i18next";
 
 const Impact = () => {
+  const { t } = useTranslation();
+  const futureItems = t('home.future.items', { returnObjects: true }) || [];
+
   return (
-    <div className="relative w-full h-[600px] overflow-hidden">
-      {/* Background Image */}
-      <img
-        src={Goat}
-        alt="Goat"
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      />
+    <div className="relative w-full overflow-hidden py-20 bg-[#F0FFDD]">
+      <div className="absolute inset-0 opacity-20">
+        <img src={Goat} alt="Livestock background" className="w-full h-full object-cover" />
+      </div>
 
-      {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col justify-start h-full">
-        {/* Heading */}
-        <div className="bg-white rounded-br-4xl px-4 md:px-10 py-8 w-full md:w-2/5 mb-20">
-          <h3 className="text-3xl md:text-4xl font-bold text-green-700">Impact Numbers</h3>
-        </div>
-
-        {/* Description Box */}
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         <Reveal>
-        <div className="bg-white rounded-xl px-4 md:px-10 py-6 w-[90%] max-w-full md:w-2/5 mt-30 md:mt-6 md:ml-20 mx-auto md:mx-0 shadow-md">
-          <p className="text-xl md:text-2xl font-semibold text-gray-800 leading-relaxed">
-           
-            <CountUp
-              from={0}
-              to={20000}
-              separator=","
-              direction="up"
-              duration={1}
-              className="count-up-text text-green-700"
-              startCounting
-            />
-            <span className="text-green-700">+</span> Farmers Targeted <br />
-            North Shewa Coverage <br />
-            Certified Professionals <br />
-            Scalable National Model
-          </p>
-        </div>
+          <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:p-12 border border-green-100">
+            <p className="text-sm uppercase tracking-[0.2em] text-green-700 font-semibold mb-3">{t('home.future.label')}</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-green-900 mb-8">{t('home.future.title')}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {futureItems.map((item) => (
+                <div key={item} className="rounded-2xl bg-[#F0FFDD] border border-green-200 p-5 text-gray-800 font-medium">
+                  {item}
+                </div>
+              ))}
+            </div>
+            <p className="mt-8 text-lg text-gray-700 leading-relaxed">{t('home.future.description')}</p>
+          </div>
         </Reveal>
       </div>
     </div>

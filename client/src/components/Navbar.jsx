@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/images/logo_live.png";
+import Logo from "../assets/images/hulegeb_logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';

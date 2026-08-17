@@ -1,6 +1,6 @@
 import React from "react";
-import Help from "../../assets/images/Help.png";
-import Nearby from "../../assets/images/nearby.png";
+import Help from "../../assets/images/discuss.png";
+import Nearby from "../../assets/images/assess.png";
 import On_Work from "../../assets/images/on-work.jpg";
 import Finished from "../../assets/images/finished.jpg";
 import { useTranslation } from 'react-i18next';

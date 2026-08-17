@@ -1,39 +1,30 @@
 import React from "react";
 import Cow from "../../assets/images/cow.png";
+import { useTranslation } from "react-i18next";
 
 const Why_ILSD = () => {
-  return (
-    <div className="flex flex-col lg:flex-row items-center justify-between bg-green-100 rounded-xl shadow-md">
-      {/* Left: Cow Image */}
-      <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
-        <img
-          src={Cow}
-          alt="Cow"
-          className="w-full h-auto object-cover"
-        />
-      </div>
+  const { t } = useTranslation();
+  const reasons = t('home.whyChoose.items', { returnObjects: true }) || [];
 
-      {/* Right: Benefits List */}
-      <div className="w-full lg:w-1/2 lg:pl-10 px-4 lg:ml-10">
-        <h2 className="text-5xl font-bold text-gray-800 mb-6">Why ILSD?</h2>
-        <ul className="space-y-4 text-lg text-gray-700">
-          <li className="flex items-start">
-            <span className="text-green-600 font-bold mr-2">✓</span>
-            Faster access to certified professionals
-          </li>
-          <li className="flex items-start">
-            <span className="text-green-600 font-bold mr-2">✓</span>
-            Quality-assured services
-          </li>
-          <li className="flex items-start">
-            <span className="text-green-600 font-bold mr-2">✓</span>
-            Reduced delays & travel cost
-          </li>
-          <li className="flex items-start">
-            <span className="text-green-600 font-bold mr-2">✓</span>
-            Digital traceability
-          </li>
-        </ul>
+  return (
+    <div className="max-w-6xl mx-auto px-6 py-16">
+      <div className="bg-gradient-to-r from-[#F0FFDD] to-white rounded-3xl shadow-lg overflow-hidden flex flex-col lg:flex-row items-center">
+        <div className="w-full lg:w-1/2">
+          <img src={Cow} alt="Livestock care" className="w-full h-full object-cover" />
+        </div>
+
+        <div className="w-full lg:w-1/2 p-8 md:p-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-green-700 mb-3">{t('home.whyChoose.label')}</p>
+          <h2 className="text-3xl md:text-5xl font-bold text-green-900 mb-8">{t('home.whyChoose.title')}</h2>
+          <ul className="space-y-4 text-lg text-gray-700">
+            {reasons.map((reason) => (
+              <li key={reason} className="flex items-start gap-3">
+                <span className="text-green-700 font-bold text-2xl leading-none">✓</span>
+                <span>{reason}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
