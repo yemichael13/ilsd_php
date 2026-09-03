@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import On_Work from "../../assets/images/vvv.jpg";
+import On_Work from "../../assets/images/i5.jpg";
 import { useTranslation } from 'react-i18next';
 
 const Who_We_Are = () => {
@@ -34,9 +34,9 @@ const Who_We_Are = () => {
         <img
           src={On_Work}
           alt="on_work"
-          className="w-full md:h-100vh h-[400px] object-cover rounded-2xl"
+          className="w-full md:h-100vh h-100 object-cover rounded-2xl"
         />
-        <div className="absolute inset-y-0 right-0 md:w-1/2 bg-black/40 text-white flex items-center p-6 transition-opacity duration-700 ease-in-out">
+        <div className="absolute inset-y-0 right-0 md:w-1/2 bg-black/70 text-white flex items-center p-6 transition-opacity duration-700 ease-in-out">
           <p className="text-lg leading-relaxed">{t('about.who.overlayText')}</p>
         </div>
       </div>

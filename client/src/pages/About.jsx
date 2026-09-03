@@ -20,9 +20,7 @@ const About = () => {
                 </Reveal>
             </section>
             <section id="mission">
-                <Reveal>
-                  <Mission_Vision_Value />
-                </Reveal>
+                <Mission_Vision_Value />
             </section>
             <section id="service-area">
                 <Reveal>

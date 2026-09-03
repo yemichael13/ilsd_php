@@ -1,7 +1,7 @@
 import React from "react";
-import AI from "../../assets/images/artificial_ins.avif";
-import Vet_Services from "../../assets/images/vet_services.jpg";
-import Advisory from "../../assets/images/advisory_nutrition.webp";
+import AI from "../../assets/images/i9.jpg";
+import Vet_Services from "../../assets/images/i16.jpg";
+import Advisory from "../../assets/images/i17.jpg";
 import { useTranslation } from "react-i18next";
 
 const What_We_Do = () => {

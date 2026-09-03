@@ -19,8 +19,8 @@
   },
   "home": {
     "hero": {
-      "title": "Hulegeb Livestock Services",
-      "subtitle": "Support for healthier animals, better breeding outcomes, and more informed livestock management.",
+      "title": "Hulegeb Agricultural Supports Service PLC",
+      "subtitle": "Connecting Farmers to Quality Livestock Services—Anytime, Anywhere.",
       "paragraph": "ILSD provides professional veterinary, artificial insemination, and livestock consultation services designed to support healthier animals, better breeding outcomes, and more informed livestock management.",
       "serviceTags": {
         "vet": "Veterinary Care",
@@ -41,9 +41,9 @@
           "description": "Professional veterinary support to help livestock owners maintain animal health and respond appropriately to livestock health problems.",
           "highlights": ["Animal health", "Farm support", "Practical care"]
         },
-        {
+        { 
           "title": "Artificial Insemination",
-          "description": "Professional reproductive support to help livestock owners improve breeding management and productivity.",
+          "description":"Professional reproductive support to help livestock owners improve breeding management and productivity.",
           "highlights": ["Breeding support", "Reproductive care", "Farm productivity"]
         },
         {
@@ -98,19 +98,23 @@
   },
   "services": {
     "title": "Current Services",
-    "description": "HULEGEB is currently focused on professional veterinary care, artificial insemination, and livestock consultation services for better animal health and more informed livestock management.",
+    "description": "Hulegeb Agricultural Support Service PLC focuses primarily on four complementary service areas.",
     "list": [
       {
-        "title": "Veterinary Services",
-        "description": "Professional veterinary support to help livestock owners maintain animal health and respond appropriately to livestock health problems."
+        "title": "Veterinary and Animal Health Services",
+        "description": "Diagnosis, Treatment, Vaccination, Disease Prevention, Health Monitoring and Animal Health Advisory Services."
       },
       {
-        "title": "Artificial Insemination Services",
-        "description": "Professional reproductive support to help livestock owners improve breeding management."
+        "title": "Artificial Insemination and Reproductive Services",
+        "description": "Heat Detection Support, AI, Pregnancy Diagnosis, Reproductive Monitoring and Breeding Advisory Services."
       },
       {
-        "title": "Livestock Consultation",
-        "description": "Professional guidance for better livestock health, breeding, and management decisions."
+        "title": "Contract Livestock Farm Services",
+        "description": "Scheduled Veterinary Visits, Herd Health Programs, Reproductive Management, AI Services, Farm Monitoring and Technical Consultancy Under Annual or Periodic Service Contracts."
+      },
+      {
+        "title": "Community Livestock Services",
+        "description": "Veterinary and AI Services for Livestock Owners in Surrounding Villages, Supported by Outreach and Mobile Service Delivery."
       }
     ],
     "futureTitle": "Future Services & Innovation",
@@ -174,9 +178,9 @@
   "contact": {
     "heading": "Get in touch",
     "title": "Contact HULEGEB",
-    "phone": "+251-XXX-XXX-XXX",
-    "email": "info@livestock.org",
-    "address": "Debre Berhan, Ethiopia",
+    "phone": "+251-950-030-707",
+    "email": "hulegebvet@gmail.com",
+    "address": "Office, Debrebirhan, Ethiopia",
     "hours": "Monday to Saturday: 8:00 AM - 5:00 PM",
     "form": {
       "title": "Send a message",
@@ -199,7 +203,7 @@
   },
   "news": {
     "title": "News & Updates",
-    "description": "Stay informed with the latest company news, veterinary activities, advisory updates, and future developments from ILSD.",
+    "description": "Stay informed with the latest company news, veterinary activities, advisory updates, and future developments from Hulegeb.",
     "loading": "Loading news...",
     "failed": "Failed to load news",
     "noNews": "No news available at the moment.",
@@ -207,19 +211,50 @@
   },
   "about": {
     "who": {
-      "title": "About HULEGEB",
-      "paragraphShort": "HULEGEB is a livestock service initiative focused on providing professional veterinary, artificial insemination, and livestock consultation services.",
+      "title": "About Hulegeb",
+      "paragraphShort": "Hulegeb is a livestock service initiative designed to help farmers maximize their productivity and profits. We provide hands-on professional veterinary care to treat and prevent animal diseases.",
       "readMore": "Read more",
       "showLess": "Show less",
-      "moreParagraph": "HULEGEB is dedicated to supporting livestock owners with practical, professional, and farmer-centered services that improve animal health, breeding outcomes, and management decisions.",
+      "moreParagraph": "Our advanced artificial insemination services introduce high-quality genetics to improve breed traits like milk and meat yield. Additionally, our expert livestock consultation helps farmers make smart, data-driven decisions about daily farm management, animal nutrition, and long-term business growth. By putting farmers first, Hulegeb ensures healthier herds, better breeding outcomes, and sustainable farming success.",
       "overlayText": "Our work centers on helping farmers access dependable support for livestock health, breeding, and management in a practical and locally responsive way."
     },
     "mission": {
       "title": "Mission & Vision",
       "missionTitle": "Our Mission",
-      "missionText": "To provide accessible, professional, and quality-focused veterinary, artificial insemination, and livestock consultation services that support healthier animals, improved breeding, and better livestock management.",
+      "missionText": "Hulegeb Agricultural Supports Service PLC is committed to providing accessible, reliable and professional veterinary and artificial insemination (AI) services to livestock owners, surrounding villages and commercial livestock farms. The company aims to improve livestock productivity, reproductive performance and farm profitability through timely animal health services, quality breeding services, professional technical support and contractual livestock management services.",
       "visionTitle": "Our Vision",
-      "visionText": "To become a trusted livestock service provider that combines professional expertise, quality service, and innovation to contribute to improved livestock health, productivity, and farmer livelihoods."
+      "visionText": "To become a leading and trusted livestock veterinary and artificial insemination service provider in Ethiopia, contributing to productive, healthy and profitable livestock farming."
+    },
+    "strategy": {
+      "eyebrow": "Strategic Direction",
+      "title": "A practical model for lasting livestock impact",
+      "overallGoalTitle": "Overall Goal",
+      "overallGoal": "To improve livestock production and productivity in surrounding communities and commercial livestock farms by delivering quality veterinary, animal health and artificial insemination services on a sustainable and commercially viable basis.",
+      "specificGoalsTitle": "Specific Goals",
+      "specificGoals": [
+        "Provide accessible veterinary services through the licensed livestock clinic or station to livestock owners in surrounding villages.",
+        "Deliver professional artificial insemination services to improve genetic quality, reproductive performance and livestock productivity.",
+        "Reduce livestock diseases and mortality through preventive, diagnostic, treatment and animal health advisory services.",
+        "Provide contractual livestock services to commercial farms, including regular veterinary care, herd health monitoring, reproductive management, AI services and technical advisory support.",
+        "Improve livestock farm productivity and profitability with integrated animal health, breeding and management services tailored to each farm.",
+        "Establish long-term service contracts with livestock farms for reliable and continuous veterinary and reproductive-health support.",
+        "Serve surrounding rural communities with veterinary and AI services that are more accessible, timely and affordable.",
+        "Promote improved livestock breeding practices through farmer education, reproductive monitoring and appropriate use of improved genetics.",
+        "Develop a sustainable agricultural service business that creates employment and contributes to the local livestock sector."
+      ],
+      "brandGoal": "Build Hulegeb as a trusted livestock service brand recognized for professionalism, responsiveness, animal welfare, quality service and practical results.",
+      "modelTitle": "Our dual-service model",
+      "modelText": "We combine affordable veterinary and AI services for surrounding livestock owners with contract-based professional livestock services for commercial and institutional farms. This serves smallholder farmers while creating a stable business revenue stream.",
+      "longTermTitle": "Long-term objective",
+      "longTermText": "Develop from a livestock clinic and AI service provider into an integrated livestock service company offering animal health, reproductive, breeding, herd-management and farm advisory services.",
+      "approachTitle": "Our Approach",
+      "approach": [
+        { "title": "Clinic + mobile response", "text": "Clinic-based care, mobile visits and on-call response for timely support." },
+        { "title": "Quality-first", "text": "Evidence-based diagnosis, cold-chain management and standardized service protocols." },
+        { "title": "Preventive focus", "text": "Disease control and advisory services are central, alongside treatment." },
+        { "title": "Data-driven", "text": "Digital records support planning, traceability and performance monitoring." },
+        { "title": "Farmer-centered", "text": "Services are designed for smallholders, cooperatives and commercial livestock enterprises." }
+      ]
     },
     "values": {
       "title": "Core Values",
@@ -233,19 +268,19 @@
     },
     "serviceArea": {
       "title": "Service Area",
-      "description": "HULEGEB serves livestock owners through its local operational areas and community-based service delivery model.",
+      "description": "Hulegeb serves livestock owners through its local operational areas and community-based service delivery model.",
       "placeholder": "Service coverage is focused on local livestock service areas and community engagement."
     }
   },
   "footer": {
-    "brandName": "HULEGEB Livestock Services",
+    "brandName": "Hulegeb Agricultural Supports Service PLC",
     "subscribeHeading": "Subscribe",
     "placeholder": "Your email",
     "subscribeButton": "Subscribe",
     "quickLinks": "Quick Links",
     "currentServices": "Current Services",
     "future": "Future",
-    "findUs": "Follow HULEGEB",
+    "findUs": "Follow Hulegeb",
     "copyright": "All Rights Reserved."
   },
   "admin": {

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Livestock from "../../assets/images/livesock.jpg";
+import Livestock from "../../assets/images/i3.jpg";
 import Livestock2 from "../../assets/images/livestock2.png";
 import Livestock3 from "../../assets/images/livestock3.jpg";
-import Livestock4 from "../../assets/images/livestock4.png";
+import Livestock4 from "../../assets/images/i4.jpg";
+import Livestock6 from "../../assets/images/i12.jpg"
 import SplitText from "../animations/SplitText";
 import ShinyText from "../animations/ShinyText";
 import { useTranslation } from 'react-i18next';
@@ -10,7 +11,7 @@ import { Link } from "react-router-dom";
 import Reveal from "../../components/motion/Reveal";
 import PageMotion from "../../components/motion/PageMotion";
 
-const images = [Livestock, Livestock2, Livestock3, Livestock4];
+const images = [Livestock4, Livestock2, Livestock3, Livestock, Livestock6];
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -59,8 +60,8 @@ const Hero = () => {
                 text={t('home.hero.subtitle')}
                 speed={2}
                 delay={0}
-                className="md:text-2xl text-xl"
-                color="#C9A24D"
+                className="text-xl"
+                color="#7ba155"
                 shineColor="#ffffff"
                 spread={120}
                 direction="left"

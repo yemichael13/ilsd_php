@@ -1,5 +1,5 @@
 import React from "react";
-import Goat from "../../assets/images/goat.jpg";
+import Goat from "../../assets/images/i21.jpg";
 import Reveal from "../motion/Reveal";
 import { useTranslation } from "react-i18next";
 

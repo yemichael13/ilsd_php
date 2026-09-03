@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Cow from "../assets/images/cow2.jpg";
-import Logo from "../assets/images/hulegeb_logo_bg.png";
+import Cow from "../assets/images/i10.jpg";
+import Logo from "../assets/images/logo_n.png";
 import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -33,7 +33,7 @@ const Footer = () => {
               />
             </a>
 
-            <h3 className="text-green-700 font-bold md:font-black tedt-xl md:text-3xl text-center">{t('footer.brandName')}</h3>
+            <h3 className="text-white font-bold md:font-black tedt-xl md:text-3xl text-center">{t('footer.brandName')}</h3>
             <form
               
               className="md:flex md:justify-center md:items-center md:my-10 hidden"
@@ -59,18 +59,18 @@ const Footer = () => {
           </div>
                 <div className="w-full md:w-1/2 flex md:gap-20 gap-5 justify-center items-center px-4">
                     <div className=" border-r-2 border-r-white md:px-6 px-3 py-1 md:py-3">
-                        <h3 className="md:text-3xl text-2xl text-green-700 font-bold mb-4">{t('footer.quickLinks')}</h3>
+                        <h3 className="md:text-3xl text-2xl text-white font-bold mb-4">{t('footer.quickLinks')}</h3>
                             <ul className="flex flex-col gap-2 font-semibold text-sm text-white">
-                            <li ><Link to="/news" className="cursor-pointer hover:text-green-700 transition-colors duration-300">{t('nav.news')}</Link></li>
-                            <li ><Link to="/" className="cursor-pointer hover:text-green-700 transition-colors duration-300">{t('nav.home')}</Link></li>
-                            <li ><Link to="/about" className="cursor-pointer hover:text-green-700 transition-colors duration-300">{t('nav.about')}</Link></li>
-                            <li ><Link to="/services" className="cursor-pointer hover:text-green-700 transition-colors duration-300">{t('nav.services')}</Link></li>
-                            <li ><Link to="/faq" className="cursor-pointer hover:text-green-700 transition-colors duration-300">{t('nav.faq')}</Link></li>
-                            <li ><Link to="/contact" className="cursor-pointer hover:text-green-700 transition-colors duration-300">{t('nav.contact')}</Link></li>
+                            <li ><Link to="/news" className="cursor-pointer hover:text-green-200 transition-colors duration-300">{t('nav.news')}</Link></li>
+                            <li ><Link to="/" className="cursor-pointer hover:text-green-200 transition-colors duration-300">{t('nav.home')}</Link></li>
+                            <li ><Link to="/about" className="cursor-pointer hover:text-green-200 transition-colors duration-300">{t('nav.about')}</Link></li>
+                            <li ><Link to="/services" className="cursor-pointer hover:text-green-200 transition-colors duration-300">{t('nav.services')}</Link></li>
+                            <li ><Link to="/faq" className="cursor-pointer hover:text-green-200 transition-colors duration-300">{t('nav.faq')}</Link></li>
+                            <li ><Link to="/contact" className="cursor-pointer hover:text-green-200 transition-colors duration-300">{t('nav.contact')}</Link></li>
                             </ul>
                     </div>
                     <div className="">
-                        <h3 className="text-green-700 font-bold md:text-3xl text-2xl mb-4">{t('footer.findUs')}</h3>
+                        <h3 className="text-white font-bold md:text-3xl text-2xl mb-4">{t('footer.findUs')}</h3>
                         <ul className="flex flex-col text-sm gap-2">
                             
                             <a href="https://web.facebook.com/profile.php?id=61590557491057" target="_blank" rel="noopener noreferrer" className="cursor-pointer items-baseline transition-transform duration-300 hover:-translate-y-2 flex gap-2 text-white font-semibold"><FaFacebook />Facebook</a>

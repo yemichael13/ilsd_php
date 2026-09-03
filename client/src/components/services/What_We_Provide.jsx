@@ -5,11 +5,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import Advice from "../../assets/images/advice.jpg";
-import Artificial from "../../assets/images/artificial_insemation.jpg";
-import Treatment from "../../assets/images/treatment.jpg";
+import Advice from "../../assets/images/i18.jpg";
+import Artificial from "../../assets/images/i15.jpg";
+import Treatment from "../../assets/images/i13.jpg";
 import Digital from "../../assets/images/digital-record.webp";
-import Disease from "../../assets/images/disease-preventionf.png";
+import Disease from "../../assets/images/i1.jpg";
 import Vaccination from "../../assets/images/vaccination.jpg";
 import { useTranslation } from 'react-i18next';
 
