@@ -15,29 +15,29 @@ const Contact = () => {
   return (
     <div>
       <Navbar />
-      <PageMotion className="relative overflow-hidden min-h-screen">
+      <PageMotion className="relative overflow-hidden">
       {/* Background image */}
       <img
         src={Comp}
         alt="bg"
-        className="absolute inset-0 w-full h-screen object-cover z-0 blur-sm"
+        className="absolute inset-0 w-full h-full min-h-[calc(100vh-4rem)] object-cover z-0 blur-sm"
       />
       
         
       
 
       {/* Contact content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-white text-center px-6 py-20">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] text-white text-center px-4 sm:px-6 py-20 sm:py-24">
         <Reveal>
-          <h2 className="text-2xl md:text-4xl font-medium mb-2">
+          <h2 className="text-2xl md:text-4xl font-medium mb-2 text-green-900">
             {t('contact.heading')}
           </h2>
         </Reveal>
         <Reveal delay={0.05}>
-          <h1 className="text-6xl md:text-7xl font-bold mb-6">{t('contact.title')}</h1>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6">{t('contact.title')}</h1>
         </Reveal>
         <Reveal delay={0.1}>
-          <div className="flex flex-col gap-4 text-lg text-white">
+          <div className="flex w-full max-w-xl flex-col gap-4 text-base sm:text-lg text-white">
             <span className="flex items-center gap-3 justify-center">
               <IoCall className="" /> {t('contact.phone')}
             </span>
@@ -66,7 +66,37 @@ const Contact = () => {
               <FaLocationDot className="" /> Working Place
             </a>
           </div>
+          
         </Reveal>
+        <section className="w-full max-w-4xl border-t border-white/70 mt-8 pt-6" aria-labelledby="specific-contact-heading">
+          <h3 id="specific-contact-heading" className="font-bold text-lg sm:text-xl mb-5">
+            Specific Contact Information
+          </h3>
+          <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-4 text-left">
+            <a
+              href={`tel:${t('contact.phone_chekole')}`}
+              className="rounded-xl border border-white/30 bg-black/20 p-4 transition hover:bg-black/30"
+            >
+              <p className="font-semibold">{t('contact.chekole')}</p>
+              <p className="text-sm text-gray-200 mt-1">{t('contact.veterinary')}</p>
+              <p className="flex items-center gap-2 mt-3 text-sm sm:text-base">
+                <IoCall aria-hidden="true" />
+                {t('contact.phone_chekole')}
+              </p>
+            </a>
+            <a
+              href={`tel:${t('contact.phone_tefera')}`}
+              className="rounded-xl border border-white/30 bg-black/20 p-4 transition hover:bg-black/30"
+            >
+              <p className="font-semibold">{t('contact.tefera')}</p>
+              <p className="text-sm text-gray-200 mt-1">{t('contact.Advisory')}</p>
+              <p className="flex items-center gap-2 mt-3 text-sm sm:text-base">
+                <IoCall aria-hidden="true" />
+                {t('contact.phone_tefera')}
+              </p>
+            </a>
+          </div>
+        </section>
       </div>
 
       {/* Footer */}
