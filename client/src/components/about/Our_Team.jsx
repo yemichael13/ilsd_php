@@ -16,7 +16,7 @@ const Our_Team = () => {
   const teamStructure = [
     { title: "Animal Production Specialist", qualifications: "PhD" },
     { title: "Animal Nutrition Specialists", qualifications: "PhD and M.Sc." },
-    { title: "Veterinarians", qualifications: "D.V.M./M.Sc/PhD" },
+    { title: "Veterinarians", qualifications: "D.V.M./M.Sc/PhD (Lead Scientist)" },
     { title: "Artificial Insemination Specialists", qualifications: "Specialized Training" },
     { title: "Accountant", qualifications: "Financial Management" },
     { title: "IT Specialist", qualifications: "Technology Support" },

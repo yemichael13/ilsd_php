@@ -78,7 +78,7 @@ const Contact = () => {
               className="rounded-xl border border-white/30 bg-black/20 p-4 transition hover:bg-black/30"
             >
               <p className="font-semibold">{t('contact.chekole')}</p>
-              <p className="text-sm text-gray-200 mt-1">{t('contact.veterinary')}</p>
+              
               <p className="flex items-center gap-2 mt-3 text-sm sm:text-base">
                 <IoCall aria-hidden="true" />
                 {t('contact.phone_chekole')}
