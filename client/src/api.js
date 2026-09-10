@@ -1,4 +1,6 @@
-const API_BASE = "http://localhost:8000";
+const API_BASE = (import.meta.env.VITE_API_URL || "/server").replace(/\/$/, "");
+
+export const SITE_URL = (import.meta.env.VITE_SITE_URL || window.location.origin).replace(/\/$/, "");
 
 export const api = {
   login: `${API_BASE}/auth/login.php`,
@@ -8,7 +10,8 @@ export const api = {
   createPost: `${API_BASE}/posts/create.php`,
   deletePost: `${API_BASE}/posts/delete.php`,
   uploadFile: `${API_BASE}/posts/upload.php`,
-  checkAuth: `${API_BASE}/auth/check.php`
+  checkAuth: `${API_BASE}/auth/check.php`,
+  subscribeNewsletter: `${API_BASE}/newsletter/subscribe.php`
 };
 api.getPost = `${API_BASE}/posts/get.php`;
 api.updatePost = `${API_BASE}/posts/update.php`;

@@ -10,6 +10,16 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+deployment
+deployment-ready
+server.zip
+sitemap.xml
+.env
+.env.example
+.env.production
+dist.zip
+public
+unused-assets-archive
 *.local
 
 # Editor directories and files

@@ -78,7 +78,7 @@ const News = () => {
                                     return (
                                         <Stagger.Item key={post.id}>
                                             <Link to={`/news/${post.slug}`} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 block h-full transform hover:-translate-y-2">
-                                                {imageUrl && <img src={imageUrl} alt={post.title} className="w-full h-56 object-cover" />}
+                                                {imageUrl && <img src={imageUrl} alt={post.title} loading="lazy" decoding="async" className="w-full h-56 object-cover" />}
                                                 <div className="p-6">
                                                     <h3 className="text-xl font-bold text-green-700 mb-2 line-clamp-2">{post.title}</h3>
                                                     {post.excerpt && <p className="text-gray-600 text-sm mb-4 line-clamp-3">{post.excerpt}</p>}

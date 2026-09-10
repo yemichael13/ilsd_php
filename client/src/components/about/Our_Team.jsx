@@ -32,6 +32,8 @@ const Our_Team = () => {
         <div className="flex flex-col md:flex-row items-center gap-8 bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-2xl">
           <div className="flex-shrink-0">
             <img
+              loading="lazy"
+              decoding="async"
               src={generalManager.image}
               alt={generalManager.name}
               className="w-48 h-48 rounded-full shadow-lg object-cover border-4 border-green-600"
@@ -64,6 +66,8 @@ const Our_Team = () => {
         <h3 className="text-2xl font-bold text-center mb-8 text-gray-800">Our Multidisciplinary Team</h3>
         <div className="relative overflow-hidden rounded-2xl bg-white/80 w-full">
           <img
+            loading="lazy"
+            decoding="async"
             src={Texture}
             alt="texture"
             className="absolute inset-0 w-full h-full object-cover opacity-80 z-0"

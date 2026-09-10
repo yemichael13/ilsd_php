@@ -1,0 +1,15 @@
+Options -Indexes
+RewriteEngine On
+
+# Let the PHP API and real files/directories pass through unchanged.
+RewriteRule ^server(?:/|$) - [L]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# React Router fallback for direct browser navigation.
+RewriteRule ^ index.html [L]
+
+<FilesMatch "(^\.|\.env|\.map$)">
+    Require all denied
+</FilesMatch>

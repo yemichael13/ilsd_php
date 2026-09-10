@@ -44,6 +44,7 @@ const NewsDetail = () => {
       {/* HERO IMAGE */}
       {heroImage && (
         <img
+          decoding="async"
           src={getFileUrl(heroImage.file_path)}
           alt={heroImage.file_name}
           className="w-full h-[95] object-cover"
@@ -89,6 +90,8 @@ const NewsDetail = () => {
                 if (f.mime_type?.startsWith("image/")) {
                   return (
                     <img
+                      loading="lazy"
+                      decoding="async"
                       key={f.id}
                       src={url}
                       alt={f.file_name}

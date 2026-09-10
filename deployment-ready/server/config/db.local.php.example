@@ -1,0 +1,8 @@
+<?php
+// Copy this file to db.local.php on the hosting server and fill in the values.
+// Keep db.local.php outside version control and never expose it publicly.
+$DB_HOST = 'localhost';
+$DB_PORT = '3306';
+$DB_NAME = 'replace_with_database_name';
+$DB_USER = 'replace_with_database_user';
+$DB_PASS = 'replace_with_database_password';

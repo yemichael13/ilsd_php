@@ -38,7 +38,7 @@ const AdminDashboard = () => {
   const handleDelete = async (id) => {
     try {
       await adminPostsAPI.delete(id);
-      setPosts(posts.filter((post) => post.id !== id));
+      setPosts(posts.filter((post) => String(post.id) !== String(id)));
       setDeleteConfirm(null);
     } catch (err) {
       alert(err.message || "Failed to delete post");
@@ -127,7 +127,7 @@ const AdminDashboard = () => {
                   <Reveal key={post.id} delay={0.05 * posts.indexOf(post)}>
                     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                       {imageUrl && (
-                        <img src={imageUrl} alt={post.title} className="w-full h-48 object-cover" />
+                        <img src={imageUrl} alt={post.title} loading="lazy" decoding="async" className="w-full h-48 object-cover" />
                       )}
                       <div className="p-6">
                         <div className="flex items-start justify-between mb-2">

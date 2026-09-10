@@ -9,16 +9,36 @@ import { FaTiktok } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { useTranslation } from 'react-i18next';
 import { FaTelegramPlane } from "react-icons/fa";
+import { API } from "../api.js";
 
 
 
 const Footer = () => {
   const { t } = useTranslation();
+  const [subscribeMessage, setSubscribeMessage] = useState("");
+
+  const handleSubscribe = async (event) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    try {
+      const response = await fetch(API.subscribeNewsletter, {
+        method: "POST",
+        body: form,
+      });
+      const data = await response.json();
+      setSubscribeMessage(data.success ? t("footer.subscribeSuccess") : t("footer.subscribeError"));
+      if (data.success) event.currentTarget.reset();
+    } catch {
+      setSubscribeMessage(t("footer.subscribeError"));
+    }
+  };
 
   return (
     <section>
       <div className="relative overflow-hidden w-full">
         <img
+          loading="lazy"
+          decoding="async"
           src={Cow}
           alt="Cow"
           className="absolute inset-0 w-full h-full object-cover z-0 blur-sm"
@@ -27,6 +47,8 @@ const Footer = () => {
           <div className="flex flex-col w-full md:w-1/2 md:mb-0 mb-4 items-center ">
             <a href="/" className="cursor-pointer object-contain rounded-full">
               <img
+                loading="lazy"
+                decoding="async"
                 src={Logo}
                 alt="logo"
                 className="md:w-50 w-20 md:h-50 h-20 rounded-full mt-10"
@@ -34,8 +56,7 @@ const Footer = () => {
             </a>
 
             <h3 className="text-white font-bold md:font-black tedt-xl md:text-3xl text-center">{t('footer.brandName')}</h3>
-            <form
-              
+            <form onSubmit={handleSubscribe}
               className="md:flex md:justify-center md:items-center md:my-10 hidden"
             >
               <input
@@ -55,6 +76,7 @@ const Footer = () => {
                 {t('footer.subscribeButton')}
               </button>
             </form>
+            {subscribeMessage && <p className="text-white text-sm mt-2">{subscribeMessage}</p>}
             
           </div>
                 <div className="w-full md:w-1/2 flex md:gap-20 gap-5 justify-center items-center px-4">
@@ -84,8 +106,7 @@ const Footer = () => {
             </div>
             
         </div>
-          <form
-            
+          <form onSubmit={handleSubscribe}
             className="flex justify-center items-center my-10 md:hidden px-4"
           >
             <input

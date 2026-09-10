@@ -1,10 +1,11 @@
 import { API } from "../api.js";
 
-const API_BASE = "http://localhost:8000";
-
 export const getFileUrl = (path) => {
   if (!path) return null;
-  return `${API_BASE}/${path}`;
+  const normalizedPath = String(path).replace(/^\/+/, "");
+  const listUrl = new URL(API.listPosts, window.location.origin);
+  const apiPath = listUrl.pathname.replace(/\/posts\/list\.php$/, "");
+  return new URL(`${apiPath}/${normalizedPath}`, listUrl.origin).toString();
 };
 
 export const postsAPI = {

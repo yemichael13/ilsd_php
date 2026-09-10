@@ -11,7 +11,7 @@ const Service_Area = () => {
             <div className="flex-col flex md:flex-row md:my-6 my-3 px-5 md:px-10 gap-6 justify-center items-center">
                 <p className="md:w-1/3">{t('about.serviceArea.description')}</p>
                 <div className="md:border-l-2 p-4 border-black md:w-2/3 w-full">
-                <img src={Service_Pic} alt="service-area" className=" rounded-2xl "/>
+                <img src={Service_Pic} alt="service-area" loading="lazy" decoding="async" className=" rounded-2xl "/>
                 </div>
             </div>
         </div>

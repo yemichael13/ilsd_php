@@ -10,7 +10,7 @@ const Impact = () => {
   return (
     <div className="relative w-full overflow-hidden py-20 bg-[#F0FFDD]">
       <div className="absolute inset-0 opacity-20">
-        <img src={Goat} alt="Livestock background" className="w-full h-full object-cover" />
+        <img src={Goat} alt="Livestock background" loading="lazy" decoding="async" className="w-full h-full object-cover" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">

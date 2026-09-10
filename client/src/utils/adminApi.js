@@ -1,11 +1,11 @@
 import { API } from "../api.js";
 
-const API_BASE = "http://localhost:8000";
-
 export const getFileUrl = (path) => {
   if (!path) return null;
-  // path may be 'uploads/filename'
-  return `${API_BASE}/${path}`;
+  const normalizedPath = String(path).replace(/^\/+/, "");
+  const listUrl = new URL(API.listPosts, window.location.origin);
+  const apiPath = listUrl.pathname.replace(/\/posts\/list\.php$/, "");
+  return new URL(`${apiPath}/${normalizedPath}`, listUrl.origin).toString();
 };
 
 export const adminPostsAPI = {
@@ -19,11 +19,7 @@ export const adminPostsAPI = {
     const str = String(idOrSlug);
     const isNumeric = /^\d+$/.test(str);
     const qs = isNumeric ? `?id=${str}` : `?slug=${encodeURIComponent(str)}`;
-    let res = await fetch(`${API.getPost}${qs}`, { credentials: 'include' });
-    if (res.status === 401 && window.location.hostname === 'localhost') {
-      // retry with dev bypass
-      res = await fetch(`${API.getPost}${qs}&dev=1`);
-    }
+    const res = await fetch(`${API.getPost}${qs}`, { credentials: 'include' });
     if (!res.ok) throw new Error('Failed to fetch post');
     const data = await res.json();
     if (data === null) throw new Error('Post not found');
@@ -45,16 +41,11 @@ export const adminPostsAPI = {
     fd.append("excerpt", postData.excerpt || "");
     fd.append("is_published", postData.is_published ? 1 : 0);
 
-    let res = await fetch(API.createPost, {
+    const res = await fetch(API.createPost, {
       method: "POST",
       body: fd,
       credentials: "include",
     });
-
-    if (res.status === 401 && window.location.hostname === 'localhost') {
-      // retry with dev bypass
-      res = await fetch(API.createPost + '?dev=1', { method: 'POST', body: fd });
-    }
 
     const data = await res.json();
     if (!data.success) throw new Error(data.error || "Failed to create post");
@@ -68,10 +59,7 @@ export const adminPostsAPI = {
       const fd2 = new FormData();
       fd2.append("post_id", postId);
       fd2.append("file", f);
-      let upRes = await fetch(API.uploadFile, { method: "POST", body: fd2, credentials: "include" });
-      if (upRes.status === 401 && window.location.hostname === 'localhost') {
-        await fetch(API.uploadFile + '?dev=1', { method: 'POST', body: fd2 });
-      }
+      await fetch(API.uploadFile, { method: "POST", body: fd2, credentials: "include" });
     }
 
     return data;
@@ -84,10 +72,7 @@ export const adminPostsAPI = {
       const fd2 = new FormData();
       fd2.append('post_id', postId);
       fd2.append('file', f);
-      let upRes = await fetch(API.uploadFile, { method: 'POST', body: fd2, credentials: 'include' });
-      if (upRes.status === 401 && window.location.hostname === 'localhost') {
-        await fetch(API.uploadFile + '?dev=1', { method: 'POST', body: fd2 });
-      }
+      await fetch(API.uploadFile, { method: 'POST', body: fd2, credentials: 'include' });
     }
   },
 

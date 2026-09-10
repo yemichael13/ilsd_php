@@ -75,6 +75,8 @@ const Latest_News = () => {
                                     >
                                         {imageUrl && (
                                             <img
+                                              loading="lazy"
+                                              decoding="async"
                                                 src={imageUrl}
                                                 alt={post.title}
                                                 className="w-full h-48 object-cover"

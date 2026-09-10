@@ -10,7 +10,7 @@ const Why_ILSD = () => {
     <div className="max-w-6xl mx-auto px-6 py-16">
       <div className="bg-gradient-to-r from-[#F0FFDD] to-white rounded-3xl shadow-lg overflow-hidden flex flex-col lg:flex-row items-center">
         <div className="w-full lg:w-1/2">
-          <img src={Cow} alt="Livestock care" className="w-full h-full object-cover" />
+          <img src={Cow} alt="Livestock care" loading="lazy" decoding="async" className="w-full h-full object-cover" />
         </div>
 
         <div className="w-full lg:w-1/2 p-8 md:p-12">

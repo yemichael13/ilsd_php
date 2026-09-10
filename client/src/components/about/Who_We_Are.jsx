@@ -32,6 +32,8 @@ const Who_We_Are = () => {
       {/* Image with text overlay on right side */}
       <div className="relative mt-10 rounded-2xl overflow-hidden">
         <img
+          loading="lazy"
+          decoding="async"
           src={On_Work}
           alt="on_work"
           className="w-full md:h-100vh h-100 object-cover rounded-2xl"

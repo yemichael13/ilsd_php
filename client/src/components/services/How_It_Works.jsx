@@ -25,6 +25,8 @@ const How_It_Works = () => {
             {/* Step icon */}
             <div className="shrink-0 w-20 md:w-30 md:h-30 h-20 rounded-full overflow-hidden border-4 border-green-600 bg-white shadow-md">
               <img
+                loading="lazy"
+                decoding="async"
                 src={images[index]}
                 alt={step.title}
                 className="w-full h-full object-cover"

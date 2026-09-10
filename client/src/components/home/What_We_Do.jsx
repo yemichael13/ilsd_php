@@ -24,6 +24,8 @@ const What_We_Do = () => {
               className="bg-white rounded-2xl shadow-lg overflow-hidden border border-green-100 hover:-translate-y-1 transition-transform duration-300"
             >
               <img
+                loading="lazy"
+                decoding="async"
                 src={images[index]}
                 alt={service.title}
                 className="w-full h-56 object-cover"

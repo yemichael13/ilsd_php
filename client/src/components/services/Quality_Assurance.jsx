@@ -16,6 +16,8 @@ const Quality = () => {
       <div className="flex flex-col md:flex-row gap-8">
         <div className="md:w-1/2 w-full flex">
           <img
+            loading="lazy"
+            decoding="async"
             src={Sheep_Cow}
             alt="sheep_cow"
             className="w-full h-auto object-contain max-w-md"
@@ -24,12 +26,16 @@ const Quality = () => {
 
         <div className="relative md:w-2/3 w-full flex justify-center items-center">
           <img
+            loading="lazy"
+            decoding="async"
             src={Texture}
             alt="texture"
             className="absolute inset-0 w-full h-full object-cover opacity-80 z-0 rounded-2xl"
           />
 
           <img
+            loading="lazy"
+            decoding="async"
             src={Checklist}
             alt="checklist"
             className="relative z-10 w-3/4 object-contain"

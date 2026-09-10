@@ -45,6 +45,8 @@ const What_We_Provide = () => {
           <SwiperSlide key={index}>
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <img
+                loading="lazy"
+                decoding="async"
                 src={images[index]}
                 alt={service.title}
                 className="w-full h-56 object-cover"

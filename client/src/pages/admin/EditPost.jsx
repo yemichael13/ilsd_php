@@ -162,7 +162,7 @@ const EditPost = () => {
                       <div key={file.id || index} className="flex items-center justify-between bg-gray-100 p-3 rounded-lg">
                         <div className="flex items-center gap-3 flex-1">
                           {file.file_type === "image" && (
-                            <img src={getFileUrl(file.file_path)} alt={file.file_name} className="w-12 h-12 object-cover rounded" />
+                            <img src={getFileUrl(file.file_path)} alt={file.file_name} loading="lazy" decoding="async" className="w-12 h-12 object-cover rounded" />
                           )}
                           <div>
                             <span className="text-sm text-gray-700">{file.file_name}</span>
